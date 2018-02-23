@@ -28,15 +28,16 @@ script:
   - java -jar yuicompressor-2.4.8.jar webroot/assets/css/*.css -o '.css$:.css'
   - html5validator --root webroot/
 
-#before_deploy:
+before_deploy:
+  - ls -l assets/css/*   # check sizes of mimified CSS
 
 deploy:
+  skip_cleanup: true   # we want to deploy mimified CSS
   provider: s3
   region: ${AWS_REGION}
   access_key_id: ${AWS_S3_ACCESS_KEY}
   secret_access_key: ${AWS_S3_SECRET_KEY}
   bucket: ${AWS_S3_BUCKET}
-#  skip_cleanup: false
   acl: public_read
   local_dir: webroot
 #  upload-dir: travis-builds
