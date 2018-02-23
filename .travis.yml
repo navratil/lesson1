@@ -1,16 +1,22 @@
 language: python
 
-#addons:
+addons:
+  apt:
+    packages:
+      - openjdk-8-jre  # install Java8 as required by html5validator (vnu.jar)
+
 #services:
 #env:
 #cache:
 #before_install:
-#install:
+
+install:
+ - pip install html5validator
+
 #before_script:
 
 script:
-  # faking unit testing here ...
-  - echo "All tests OK"
+  - html5validator --root webroot/
 
 #before_deploy:
 
