@@ -6,7 +6,15 @@ addons:
       - openjdk-8-jre  # install Java8 as required by html5validator (vnu.jar)
 
 #services:
+
 #env:
+# global:
+# These global enviromental variables are required and defined @ travis-ci.org / repository / settings / Environment Variables
+#  - AWS_REGION=ue-west-1
+#  - AWS_S3_BUCKET=myweb.mydomain.com   ## !! without s:// as with aws s3 comand 
+#  - AWS_S3_ACCESS_KEY=
+#  - AWS_S3_SECRET_KEY=
+
 #cache:
 #before_install:
 
