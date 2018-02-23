@@ -1,6 +1,8 @@
 Lesson 1 - Intro to Continuous integration
 ==========================================
 
+[![Build Status](https://travis-ci.org/navratil/lesson1.svg?branch=master)](https://travis-ci.org/navratil/lesson1)
+
 Goal
 ----
 Purpose of this exercise is to build fully automated CI process. 
