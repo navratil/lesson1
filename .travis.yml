@@ -29,8 +29,9 @@ script:
   - html5validator --root webroot/
 
 before_deploy:
-  - pwd
-  - ls -l *   # check sizes of mimified CSS
+  - pwd   # /home/travis/build/navratil/lesson1
+  - ls -l /home/travis/build/navratil/lesson1/assets/css/style.css   # check sizes of mimified CSS
+  - ls -l ./assets/css/style.css   # check sizes of mimified CSS
 
 deploy:
   skip_cleanup: true   # we want to deploy mimified CSS
