@@ -10,7 +10,7 @@ language: python
 
 script:
   # faking unit testing here ...
-  - bash echo "All tests OK"
+  - echo "All tests OK"
 
 #before_deploy:
 
