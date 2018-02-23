@@ -20,10 +20,12 @@ addons:
 
 install:
  - pip install html5validator
+ - wget https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar
 
 #before_script:
 
 script:
+  - java -jar yuicompressor-2.4.8.jar webroot/css/*.css -o '.css$:-min.css'
   - html5validator --root webroot/
 
 #before_deploy:
