@@ -25,7 +25,7 @@ install:
 #before_script:
 
 script:
-  - java -jar yuicompressor-2.4.8.jar webroot/css/*.css -o '.css$:-min.css'
+  - java -jar yuicompressor-2.4.8.jar webroot/assets/css/*.css -o '.css$:-min.css'
   - html5validator --root webroot/
 
 #before_deploy:
