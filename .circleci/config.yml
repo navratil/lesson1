@@ -24,6 +24,9 @@ jobs:
           name: Install CSS compressor
           command: wget https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar
       - run:
+          name: Compress CSS
+          command: java -jar yuicompressor-2.4.8.jar webroot/assets/css/*.css -o '.css$:.css'
+      - run:
           name: TEST HTML syntax
           command: /home/circleci/.local/bin/html5validator --root webroot/
       - run:
@@ -35,6 +38,8 @@ jobs:
       - store_artifacts:
           path: tests
           destination: tests
+      - store_test_results:
+          path: tests
       - run:
           name: Deployment to AWS
           command: aws s3 sync webroot s3://$AWS_S3_BUCKET --acl public-read --delete
