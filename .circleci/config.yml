@@ -1,17 +1,40 @@
-
-#Push this change up to GitHub.
-#Start building! This will launch your project on CircleCI and make our webhooks listen for updates
-#If you start building before you've added the .yml, there's no need to panic. Our platform will try to run Circle 1.0 build using inference. To get back on track, simply add the .yml and your configuration
 version: 2
+
+machine:
+  timezone: Europe/Dublin
+  environment:
+    AWS_REGION: eu-west-1
+    AWS_S3_BUCKET: test.jannavratil.com
+#  - AWS_S3_ACCESS_KEY=
+#  - AWS_S3_SECRET_KEY=	
+
+#dependencies:
+#  pre:
+#    - pip install html5validator
+#    - wget https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar
+#	- java -version
+#build
+# java -jar yuicompressor-2.4.8.jar webroot/css/*.css -o '.css$:-min.css'
+
+#test
+#test:
+#  post: 
+#      - run:
+#          name: Test: HTML5 syntax
+#          command: html5validator --root webroot/
+
+#deployment
+
 jobs:
   build:
     docker:
       - image: debian:stretch
     steps:
       - checkout
+	  - run: 
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: Install HTML5validator
+          command: https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar
       - run:
-          name: Print the Current Time
-          command: date
+          name: Test HTML5 syntax
+          command: html5validator --root webroot/
