@@ -17,10 +17,15 @@ jobs:
       - checkout
       - run:
           name: Greeting
-          command: echo $AWS_REGION
+          command: echo $AWS_REGION / ${AWS_S3_ACCESS_KEY}
       - run:
-          name: Greeting 2
-          command: echo ${AWS_S3_ACCESS_KEY}
+          name: Install HTML5Validator
+          command: pip install html5validator
       - run:
           name: Print the Current Time
           command: date
+  test:
+    steps:
+      - run:
+          name: HTML syntaxt test
+          command: html5validator --root webroot/
