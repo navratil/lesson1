@@ -24,8 +24,8 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
-  test:
-    steps:
-      - run:
-          name: HTML syntaxt test
-          command: html5validator --root webroot/
+#  test:
+#    steps:
+#      - run:
+#          name: HTML syntaxt test
+#          command: html5validator --root webroot/
