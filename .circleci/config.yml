@@ -20,7 +20,7 @@ jobs:
           command: echo $AWS_REGION / ${AWS_S3_ACCESS_KEY}
       - run:
           name: Install HTML5Validator
-          command: pip install html5validator
+          command: sudo pip install html5validator
       - run:
           name: Print the Current Time
           command: date
