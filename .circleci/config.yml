@@ -34,7 +34,7 @@ jobs:
           command: ls -l .*
       - run:
           name: List dir
-          command: ls -l .local/bin/*
+          command: ls -l ../.local/bin/*
       - run:
           name: TEST HTML syntax
           command: ~/.local/bin/html5validator --root webroot/
