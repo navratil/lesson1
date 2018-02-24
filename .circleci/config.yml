@@ -6,8 +6,8 @@ machine:
 jobs:
   build:
     docker:
-      - image: debian:stretch
-#      - image circleci/python:3.6.1
+#      - image: debian:stretch
+      - image circleci/python:3.7
     environment:
       AWS_REGION: eu-west-1
       AWS_S3_BUCKET: test.jannavratil.com
