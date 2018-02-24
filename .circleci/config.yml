@@ -17,7 +17,10 @@ jobs:
       - checkout
       - run:
           name: Greeting
-          command: echo Hello, world.
+          command: echo ${AWS_REGION}
+      - run:
+          name: Greeting 2
+          command: echo ${AWS_S3_ACCESS_KEY}
       - run:
           name: Print the Current Time
           command: date
