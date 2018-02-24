@@ -20,6 +20,9 @@ jobs:
           name: Greeting
           command: echo $AWS_REGION / ${AWS_S3_ACCESS_KEY}
       - run:
+          name: Java version
+          command: java -version
+      - run:
           name: Install HTML5Validator
           command: sudo pip install html5validator
       - run:
