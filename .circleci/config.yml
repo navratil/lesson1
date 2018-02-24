@@ -20,10 +20,11 @@ jobs:
           command: echo $AWS_REGION / ${AWS_S3_ACCESS_KEY}
       - run:
           name: Install HTML5Validator
-          command: pip install --user html5validator
+          command: sudo pip install html5validator
       - run:
           name: TEST: HTML syntax
-          command: ~/.local/bin/html5validator --root webroot/
+          command: html5validator --root webroot/
+#          command: ~/.local/bin/html5validator --root webroot/
 #  test:
 #    steps:
 #      - run:
