@@ -16,7 +16,8 @@ jobs:
       - checkout
       - run:
           name: Install HTML5validator
-          command: https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar
+		  command: pip install html5validator
+#          command: wget https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar
       - run:
           name: Test HTML5 syntax
           command: html5validator --root webroot/
