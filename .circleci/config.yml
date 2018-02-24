@@ -38,5 +38,3 @@ jobs:
       - run:
           name: Deployment to AWS
           command: aws s3 sync webroot s3://$AWS_S3_BUCKET --acl public-read --delete
-      - 
-
