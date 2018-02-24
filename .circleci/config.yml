@@ -27,5 +27,14 @@ jobs:
 #            . venv/bin/activate
 #            pip install html5validator
       - run:
+          name: Show current dir
+          command: pwd
+      - run:
+          name: List dir
+          command: ls -l .*
+      - run:
+          name: List dir
+          command: ls -l .local/bin/*
+      - run:
           name: TEST HTML syntax
           command: ~/.local/bin/html5validator --root webroot/
