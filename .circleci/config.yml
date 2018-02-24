@@ -21,8 +21,22 @@ jobs:
           name: Install HTML5Validator
           command: pip install --user html5validator
       - run:
+          name: Install CSS compressor
+          command: wget https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar
+      - run:
           name: TEST HTML syntax
           command: /home/circleci/.local/bin/html5validator --root webroot/
       - run:
+          name: List file sizes
+          command: mkdir tests
+      - run:
+          name: List file sizes
+          command: ls -l webroot/assets/css/* > tests/css-filelist.txt
+      - store_artifacts:
+          path: tests
+          destination: tests
+      - run:
           name: Deployment to AWS
           command: aws s3 sync webroot s3://$AWS_S3_BUCKET --acl public-read --delete
+      - 
+
