@@ -1,0 +1,17 @@
+
+#Push this change up to GitHub.
+#Start building! This will launch your project on CircleCI and make our webhooks listen for updates
+#If you start building before you've added the .yml, there's no need to panic. Our platform will try to run Circle 1.0 build using inference. To get back on track, simply add the .yml and your configuration
+version: 2
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+      - run:
+          name: Print the Current Time
+          command: date
