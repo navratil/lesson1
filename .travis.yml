@@ -22,7 +22,8 @@ install:
  - pip install html5validator
  - wget https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar
 
-#before_script:
+before_script:
+  - ls -l webroot/assets/css/*.css   # check CSS sizes *before* mimifing
 
 script:
   - java -jar yuicompressor-2.4.8.jar webroot/assets/css/*.css -o '.css$:.css'
@@ -31,6 +32,10 @@ script:
 before_deploy:
   - pwd   # /home/travis/build/navratil/lesson1
   - ls -l webroot/assets/css/*.css   # check sizes of mimified CSS
+#-rw-r--r-- 1 travis travis 101751 Feb 23 21:55 webroot/assets/css/bootstrap.css
+#-rw-r--r-- 1 travis travis  13139 Feb 23 21:55 webroot/assets/css/bootstrap-theme.css
+#-rw-r--r-- 1 travis travis  29039 Feb 23 21:55 webroot/assets/css/font-awesome.css
+#-rw-r--r-- 1 travis travis   2468 Feb 23 21:55 webroot/assets/css/style.css  
 
 deploy:
   skip_cleanup: true   # we want to deploy mimified CSS
