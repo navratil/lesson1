@@ -22,11 +22,10 @@ jobs:
           name: Install HTML5Validator
           command: sudo pip install html5validator
       - run:
-          name: TEST: HTML syntax
+          name: Print the Current Time
+          command: date
+  test:
+    steps:
+      - run:
+          name: HTML syntaxt test
           command: html5validator --root webroot/
-#          command: ~/.local/bin/html5validator --root webroot/
-#  test:
-#    steps:
-#      - run:
-#          name: HTML syntaxt test
-#          command: html5validator --root webroot/
