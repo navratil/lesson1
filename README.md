@@ -3,7 +3,7 @@ Lesson 1 - Intro to Continuous integration
 
 TravisCI [![Build Status](https://travis-ci.org/navratil/lesson1.svg?branch=master)](https://travis-ci.org/navratil/lesson1)
 
-CicrcleCI [![CircleCI](https://circleci.com/gh/navratil/lesson1.svg?style=svg)](https://circleci.com/gh/navratil/lesson1)
+CircleCI [![CircleCI](https://circleci.com/gh/navratil/lesson1.svg?style=svg)](https://circleci.com/gh/navratil/lesson1)
 
 Goal
 ----
