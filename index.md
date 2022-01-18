@@ -1,6 +1,3 @@
-# OPM
-Package Manager for Oracle database
-
 # Introduction
 OPM is an online repository and framework for the publishing, discovery, installation, version and dependency management of Oracle PL/SQL projects (modules). 
 
