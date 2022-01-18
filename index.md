@@ -44,6 +44,8 @@ List all installed modules
     | bigmac\tools    | 1.6.0   | 7/1/2022  | Valid  | Tools for building APIs
     | joedoe\superapi | 2.0.0   | 7/1/2022  | Valid  | Joe's super API for XYZ
 
+See also [Getting started](get-started.md)
+
 # Use anyway you need
 
 Tool | Local database | ATP @ OCI | APEX @ OCI | RDB @ AWS 
