@@ -1,4 +1,4 @@
-Lesson 1 - Intro to Continuous integration
+Lesson 1 - Intro to Continuous Integration
 ==========================================
 
 TravisCI [![Build Status](https://travis-ci.org/navratil/lesson1.svg?branch=master)](https://travis-ci.org/navratil/lesson1)
