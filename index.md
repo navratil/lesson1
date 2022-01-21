@@ -5,7 +5,7 @@ It's what [NPM](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/
 
 # Key features
 
-![demo-in-apex](/assets/demo-apex.gif)
+![demo-in-apex](/docs/assets/demo-apex.gif)
 
 - **Discover** - Find a PL/SQL module that fits your needs in an online repository
 - **Install** - Automatic installation with one command: No downloads, unpacking and running command line tools like SQL*Plus
