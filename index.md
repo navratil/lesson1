@@ -22,6 +22,9 @@ Requirements:
 
 Install module to the current schema
 
+![sql-demo](/docs/assets/sql-demo-min.gif)
+
+
     sql> opm.install('joedoe\superapi');
     
     Found package "joedoe\superapi" version 2.0.0 [latest]
