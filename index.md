@@ -3,8 +3,10 @@ OPM is an online repository and framework for the publishing, discovery, install
 
 It's what [NPM](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) is to NodeJS or [PIP](https://pypi.org/project/pip/) to Python.
 
-
 # Key features
+
+![demo-in-apex](/assets/demo-apex.gif)
+
 - **Discover** - Find a PL/SQL module that fits your needs in an online repository
 - **Install** - Automatic installation with one command: No downloads, unpacking and running command line tools like SQL*Plus
 - **Versioning** - Each release of a module has an unique version number for compability and dependency tracking
