@@ -5,7 +5,7 @@ It's what [NPM](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/
 
 # Key features
 
-![demo-in-apex](/docs/assets/demo-apex.gif)
+![sql-demo](/docs/assets/sql-demo-min.gif)
 
 - **Discover** - Find a PL/SQL module that fits your needs in an online repository
 - **Install** - Automatic installation with one command: No downloads, unpacking and running command line tools like SQL*Plus
@@ -22,8 +22,7 @@ Requirements:
 
 Install module to the current schema
 
-![sql-demo](/docs/assets/sql-demo-min.gif)
-
+![demo-in-apex](/docs/assets/demo-apex.gif)
 
     sql> opm.install('joedoe\superapi');
     
